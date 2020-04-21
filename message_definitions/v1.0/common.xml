@@ -4399,6 +4399,16 @@
       <description>Emit an encrypted signature / key identifying this system. PLEASE NOTE: This protocol has been kept simple, so transmitting the key requires an encrypted channel for true safety.</description>
       <field type="char[32]" name="key">key</field>
     </message>
+
+    <!--  This message is for certificate -->
+    <message id="10000" name="CERTIFICATE">
+      <description>Certificate signed by the authority. If the certificate is trusted then the device can communicate with other devices.</description>
+      <field type="uint8_t" name="device_id" units="">Network address</field>
+      <field type="char[20]" name="device_name" units="">Name of machine</field>
+      <field type="char[20]" name="maintainer" units="">Name of maintainer</field>
+      <field type="uint8_t[32]" name="public_key" units="rad">Public key of device</field>
+    </message>
+
     <message id="8" name="LINK_NODE_STATUS">
       <wip/>
       <!-- This message is work-in-progress and it can therefore change. It should NOT be used in stable production environments. -->
