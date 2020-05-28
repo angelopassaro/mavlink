@@ -4407,6 +4407,7 @@
       <field type="char[20]" name="device_name" units="">Name of machine</field>
       <field type="char[20]" name="maintainer" units="">Name of maintainer</field>
       <field type="uint8_t[32]" name="public_key" units="rad">Public key of device</field>
+      <field type="uint8_t[32]" name="sign" units="rad">Sign of Authority</field>
     </message>
 
     <message id="8" name="LINK_NODE_STATUS">
