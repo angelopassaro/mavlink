@@ -4996,11 +4996,6 @@
       <description>Report status of a command. Includes feedback whether the command was executed. The command microservice is documented at https://mavlink.io/en/services/command.html</description>
       <field type="uint16_t" name="command" enum="MAV_CMD">Command ID (of acknowledged command).</field>
       <field type="uint8_t" name="result" enum="MAV_RESULT">Result of command.</field>
-      <extensions/>
-      <field type="uint8_t" name="progress">WIP: Also used as result_param1, it can be set with a enum containing the errors reasons of why the command was denied or the progress percentage or 255 if unknown the progress when result is MAV_RESULT_IN_PROGRESS.</field>
-      <field type="int32_t" name="result_param2">WIP: Additional parameter of the result, example: which parameter of MAV_CMD_NAV_WAYPOINT caused it to be denied.</field>
-      <field type="uint8_t" name="target_system">WIP: System which requested the command to be executed</field>
-      <field type="uint8_t" name="target_component">WIP: Component which requested the command to be executed</field>
     </message>
     <message id="81" name="MANUAL_SETPOINT">
       <description>Setpoint in roll, pitch, yaw and thrust from the operator</description>
